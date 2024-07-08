@@ -1,0 +1,5 @@
+# Booleans
+
+&& and
+|| or
+!  not
