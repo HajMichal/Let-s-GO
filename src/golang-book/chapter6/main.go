@@ -18,6 +18,8 @@ func main() {
 	fmt.Println(lowestNum)
 
 	fmt.Println("Average of given arr: ", average(arr))
+
+	printSlice()
 }
 
 func average(arr []int) float64{
@@ -26,4 +28,17 @@ func average(arr []int) float64{
 		total += float64(v)
 	}
 	return total / float64(len(arr))
+}
+
+func add(args ...int) int {
+	total := 0
+	for _, v := range args {
+		total += v
+	}
+	return total
+}
+
+func printSlice() {
+	xs := []int{1,2,3}
+	fmt.Println(add(xs...))
 }
