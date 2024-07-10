@@ -53,3 +53,32 @@ func main() {
     panic("Panic")
 }
 ```
+
+## Pointers
+are arguemnts which can change variable value from the original function in sub-function
+```
+func zero(xPtr *int) {
+    *xPtr = 0
+}
+func main() {
+    someValue := 5
+    zero(&someValue)
+    fmt.Println(someValue) // output is 0
+}
+```
+
+Asterisk(*) is representing pointer type and value in sub-function, 
+Operator(&) is finding the address of a variable
+
+Another way to get a pointer is to use built-in function named new 
+Insted of 
+```
+    someValue := 5
+    zero(&someValue)
+```
+We can:
+```
+    someValue := new(int)
+    zero(someValue)
+```
+New takes a type as arguemtn

@@ -28,9 +28,9 @@ arr := [5]float64{1,2,3,4,5}
 x := arr[1,3] // x returns [2,3]
 ``````
 
-`x :=arr[3:]` is the same as `x :=arr[3:5]`
+`x := arr[3:]` is the same as `x := arr[3:5]`
 
-`x :=arr[:3]` is the same as `x :=arr[0:3]`
+`x := arr[:3]` is the same as `x := arr[0:3]`
 
 There are 2 built-in functions to assist with slices:
 * append `slice2 := append(slice1, 4, 5)`
