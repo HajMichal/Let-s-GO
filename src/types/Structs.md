@@ -7,6 +7,9 @@ type Circle struct {
     y float64
     r float64
 }
+
+var c Circle
+c := new(Circle)
 ```
 
 If you want to assign values to a struct:
