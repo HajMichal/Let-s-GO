@@ -56,3 +56,26 @@ if el, ok := elements["C"]; ok {
     fmt.Println(el["name"], el["state"])
 }
 ```
+
+To remove key value pair from map:
+`delete(nameOfMap, keyYouWantToRemove)`
+
+
+If we are iterating through map we can:
+```
+for keyName, value := range nameOfMap {
+
+}
+```
+
+Differences between maps and structs
+ * Maps:
+    - must have all keys with the same type and all values with the same types
+    - are idexable
+    - when we pass map somewhere we pass copy reference to this map (not strict map)
+
+ * Structs:
+    - types can be mixed
+    - NOT idexable
+    - when we pass structs somewhere we pass actuall copy of struct
+
