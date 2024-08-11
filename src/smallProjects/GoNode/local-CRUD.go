@@ -8,7 +8,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-type Todo struct {
+type todo struct {
 	ID 				int 		`json:"id" bison:"id"` 				
 	Completed bool 		`json:"completed" bison:"completed"` 	
 	Body 			string 	`json:"body" bison:"body"`				
@@ -18,7 +18,7 @@ func local_crud() {
 
 	app := fiber.New()
 
-	todos := []Todo{}
+	todos := []todo{}
 
 
 	app.Get("/api/todos", func(c *fiber.Ctx)  error {
@@ -26,7 +26,7 @@ func local_crud() {
 	})
 
 app.Post("/api/todos", func (c * fiber.Ctx) error {
-	todo := &Todo{}
+	todo := &todo{}
 	if err := c.BodyParser(todo); err != nil {
 		return err
 	}
